@@ -1,0 +1,21 @@
+@import "colors.scss";
+
+.navbar {
+	background-color: $dark;
+}
+
+.flex-container {
+	background-color: $orange;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	padding: 15px;
+	div {
+		list-style-type: none;
+		margin: 0px 10px;
+		cursor: pointer;
+		:hover {
+			color: blue;
+		}
+	}
+}

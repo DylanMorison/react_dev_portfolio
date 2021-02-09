@@ -10,11 +10,7 @@ const app = express();
 const jsonNoExtended = express.json({ extended: false });
 
 app.use(jsonNoExtended);
-app.use(authRoutes);
-
-app.get("/", requireAuth, async (req, res) => {
-	res.send(`Your email is ${req.user.email}`);
-});
+app.use("/api", authRoutes);
 
 const PORT = process.env.PORT || 5000;
 
